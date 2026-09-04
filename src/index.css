@@ -1,8 +1,38 @@
-@import "tailwindcss";
-@plugin "daisyui";
-
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #CAEB66;
+  --color-secondary: #03373D;
+}
+/* @plugin "daisyui/theme" {
+  name: "dark";
+  prefersdark: true;
+  --color-primary: red;
+  --color-secondary: #03373D;
+} */
+
+/* @plugin "daisyui" {
+  themes: Tarek --default, valentine --prefersdark,yellow;}
+@plugin "daisyui/theme" {
+  name: "valentine";
+  prefersdark: true;
+  --color-primary: red;
+  --color-secondary: #03373D;
+} */
+/* @plugin "daisyui/theme" {
+  name: "Tarek";
+  default: true; /* set as default */
+  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light; /* color of browser-provided UI 
+
+  --color-primary: orange;
+  --color-base-200: oklch(95% 0.03 240); } */
 
 body{
   font-family: "Urbanist", sans-serif;

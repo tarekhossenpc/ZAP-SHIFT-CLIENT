@@ -9,7 +9,7 @@ const Services = () => {
         <h1 className="text-center mt-5 text-white font-bold text-3xl ">
           Our Services
         </h1>
-        <p className="text-white text-center my-3  ">
+        <p className="text-center my-3 text-neutral text-base ">
           Enjoy fast, reliable parcel delivery with real-time tracking and zero
           hassle. From personal packages to business shipments — we deliver on
           time, every time.

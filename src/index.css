@@ -9,6 +9,8 @@
   default: true;
   --color-primary: #CAEB66;
   --color-secondary: #03373D;
+  --color-neutral: #DADADA;
+  --color-neutral-accent: #606060;
 }
 /* @plugin "daisyui/theme" {
   name: "dark";

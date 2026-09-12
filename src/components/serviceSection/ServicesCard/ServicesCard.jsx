@@ -1,3 +1,4 @@
+import serviceImg from '../../../assets/othersImg/service.png'
 const ServiceCard = ({
   title,
   description,
@@ -21,16 +22,16 @@ const ServiceCard = ({
     >
       {/* Icon */}
       <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-purple-50">
-        <span className="text-2xl">📦</span>
+        <span className="text-2xl"><img src={serviceImg} alt="" /></span>
       </div>
 
       {/* Title */}
-      <h3 className="mt-5 text-lg font-bold text-[#003F43]">
+      <h3 className="mt-5 text-lg font-bold text-secondary">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="mt-3 text-sm leading-6 text-gray-600">
+      <p className="mt-3 text-sm leading-6 text-neutral-accent">
         {description}
       </p>
     </div>

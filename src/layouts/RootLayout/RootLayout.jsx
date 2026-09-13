@@ -6,7 +6,7 @@ import HowItWorks from '../../components/HowItWorksSection/HowItWorks';
 
 const RootLayout = () => {
     return (
-        <div className='max-w-[1500px] mx-auto bg-base-300'>
+        <div className=' max-w-[1500px] mx-auto bg-base-300'>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <HowItWorks></HowItWorks>

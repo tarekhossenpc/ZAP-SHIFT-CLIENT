@@ -1,4 +1,4 @@
-import bookingImg from '../../assets/othersImg/bookingIcon.png'
+import bookingImg from '../../../assets/othersImg/bookingIcon.png'
 const HowItWorks = () => {
     return (
         <div className='max-w-7xl mx-auto my-24'>

@@ -6,17 +6,17 @@ import Coverage from "../pages/Coverage/Coverage/Coverage";
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component:RootLayout,
-    children:[
+    Component: RootLayout,
+    children: [
       {
-        index:true,
-        Component:Home
+        index: true,
+        Component: Home,
       },
       {
-        path:"coverage",
-        Component:Coverage
-        
-      }
-    ]
+        path: "coverage",
+        Component: Coverage,
+        loader: () => fetch("/serviceCenters.json").then((res) => res.json()),
+      },
+    ],
   },
 ]);

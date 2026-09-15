@@ -1,25 +1,37 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import 'leaflet/dist/leaflet.css';
-const LocationMap = () => {
-     const position = [23.8103, 90.4125];
-    return (
-         <MapContainer
-      center={position}
-      zoom={6}
-      style={{ height: "500px", width: "100%" }}
+import "leaflet/dist/leaflet.css";
+const LocationMap = ({ serviceCenters }) => {
+  const serviceCentersData = serviceCenters;
+  console.log(serviceCentersData);
+  const dhaka = [23.8103, 90.4125];
+  return (
+  <div>
+       
+       <MapContainer
+      center={dhaka}
+      zoom={7}
+      style={{ height: "600px", width: "100%" }}
     >
       <TileLayer
-        attribution='&copy; OpenStreetMap contributors'
+        attribution="&copy; OpenStreetMap contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-
-      <Marker position={position}>
-        <Popup>
-          Dhaka, Bangladesh
-        </Popup>
-      </Marker>
+      
+      {serviceCentersData.map((serviceCenter, index) => (
+        <Marker
+          key={index}
+          position={[serviceCenter.latitude, serviceCenter.longitude]}
+        >
+          <Popup>
+            <strong >{serviceCenter.district}</strong>
+            <br />
+            <span className="text-green-400">Service Area :{serviceCenter.covered_area.join(", ")}</span>
+          </Popup>
+        </Marker>
+      ))}
     </MapContainer>
-    );
+  </div>
+  );
 };
 
 export default LocationMap;
